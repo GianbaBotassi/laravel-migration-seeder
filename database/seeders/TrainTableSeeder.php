@@ -24,6 +24,6 @@ class TrainTableSeeder extends Seeder
         // $train->save();
 
         //Genera tramite factory un numero di oggetti pari a count
-        Train::factory()->count(50)->create();
+        Train::factory()->count(10)->create();
     }
 }

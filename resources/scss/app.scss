@@ -1,5 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 
-header {
+header,
+footer,
+main {
     color: orange;
+}
+
+tbody {
+    background-color: black !important;
 }

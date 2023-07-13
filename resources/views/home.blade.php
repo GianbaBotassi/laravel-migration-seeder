@@ -2,25 +2,34 @@
 
 
 @section('content')
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Cod.Treno</th>
-                <th scope="col">Compagnia</th>
-                <th scope="col">Vagoni</th>
-                <th scope="col">Data di partenza</th>
-                <th scope="col">Data di arrivo</th>
-                <th scope="col">Stazione di partenza</th>
-                <th scope="col">Stazione di arrivo</th>
-                <th scope="col">In orario</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
+    <main>
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Cod.Treno</th>
+                    <th scope="col">Compagnia</th>
+                    <th scope="col">Vagoni</th>
+                    <th scope="col">Data di partenza</th>
+                    <th scope="col">Data di arrivo</th>
+                    <th scope="col">Stazione di partenza</th>
+                    <th scope="col">Stazione di arrivo</th>
+                    <th scope="col">In orario</th>
+                </tr>
+            </thead>
+            <tbody>
                 @foreach ($trains as $train)
-                    <td>{{ $train->code }}</td>
+                    <tr>
+                        <td>{{ $train->code }}</td>
+                        <td>{{ $train->company }}</td>
+                        <td>{{ $train->carriages }}</td>
+                        <td>{{ $train->departure_time }}</td>
+                        <td>{{ $train->arrival_time }}</td>
+                        <td>{{ $train->departure_station }}</td>
+                        <td>{{ $train->arrival_station }}</td>
+                        <td>{{ $train->in_time }}</td>
+                    </tr>
                 @endforeach
-            </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </main>
 @endsection
