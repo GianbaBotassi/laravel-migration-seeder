@@ -12,12 +12,12 @@ class MainController extends Controller
 
     public function index()
     {
-        // $trains = Train::all();
+        $trains = Train::all();
         // dd($trains);
 
         return view(
-            'home'
-            // , compact('trains')
+            'home',
+            compact('trains')
         );
     }
 }

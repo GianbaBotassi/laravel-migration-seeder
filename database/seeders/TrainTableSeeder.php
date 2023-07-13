@@ -16,9 +16,14 @@ class TrainTableSeeder extends Seeder
      */
     public function run()
     {
-        $train = new Train();
-        $train->code = '1234567890';
 
-        $train->save();
+        //Esempio per generare senza factory
+        // $train = new Train();
+        // $train->code = '1234567890';
+
+        // $train->save();
+
+        //Genera tramite factory un numero di oggetti pari a count
+        Train::factory()->count(50)->create();
     }
 }
